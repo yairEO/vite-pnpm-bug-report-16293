@@ -1,3 +1,13 @@
-# React Tagify Test App
+# Vite bug report - test case
 
-A basic React App (Vite + SWC) for testing my [Tagify package](https://github.com/yairEO/tagify)
+Regarding issue https://github.com/vitejs/vite/issues/16293
+
+This happens with using `pnpm` only.
+
+Note that this repo already includes a 3rd-party highly-simplified module in `node_modules`.
+
+Simply run `pnpm i` then `pnpm dev` and open the served app on the browser and view the error in the console:
+
+![image](https://github.com/yairEO/vite-pnpm-bug-report-16293/assets/845031/8d34c604-3b5b-47cc-ba20-cc97e09eb9b0)
+
+> Uncaught SyntaxError: The requested module '/node_modules/.pnpm/react-dom@18.2.0_react@18.2.0/node_modules/react-dom/server.browser.js?v=60c0bbfc' does not provide an export named 'renderToStaticMarkup'
